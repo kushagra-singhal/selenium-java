@@ -13,7 +13,7 @@ public class staticDropdown {
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
         //checkbox
-        System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+        //System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
         Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
         driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
         System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());  // to know if checkbox is selected -- returns true
@@ -21,7 +21,24 @@ public class staticDropdown {
         // count the number of checkboxes
         driver.findElement(By.cssSelector("input[type='checkbox']"));   // find 1st checkbox
 
-        System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());  //finds all checkboxes
+        //System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());  //finds all checkboxes
+
+
+        // round trip
+        //System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date2")).isEnabled());    //to see if round trip is enable or not - if false click
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+        if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))
+        {
+            System.out.println("It's Enabled");
+            Assert.assertTrue(true);
+        }
+        else
+        {
+            Assert.assertTrue(false);
+        }
+
 
 
 
@@ -39,7 +56,7 @@ public class staticDropdown {
         driver.findElement(By.id("divpaxinfo")).click();
         Thread.sleep(2000);
 //        driver.findElement(By.id("hrefIncAdt")).click(); // click here 4 times to increase no. of adults
-        System.out.println(driver.findElement(By.id("divpaxinfo")).getText());  // before selecting
+        //System.out.println(driver.findElement(By.id("divpaxinfo")).getText());  // before selecting
 
         int i =1;
 //        while (i<5)
@@ -55,7 +72,7 @@ public class staticDropdown {
 
         driver.findElement(By.id("btnclosepaxoption")).click();     // done button
         Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(),"5 Adult");
-        System.out.println(driver.findElement(By.id("divpaxinfo")).getText()); // after selecting
+        //System.out.println(driver.findElement(By.id("divpaxinfo")).getText()); // after selecting
 
     }
 }

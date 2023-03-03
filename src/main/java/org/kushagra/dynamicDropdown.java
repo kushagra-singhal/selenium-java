@@ -19,7 +19,7 @@ public class dynamicDropdown {
         driver.findElement(By.xpath("//a[@value='BLR']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
-        driver.findElement(By.xpath("//tbody/tr[1]/td[5]/a[1]")).click();
+        driver.findElement(By.cssSelector(".ui-datepicker-days-cell-over.ui-datepicker-today")).click();
 
 
 
