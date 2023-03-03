@@ -29,7 +29,7 @@ public class staticDropdown {
         System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
-        if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))
+        if(driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
         {
             System.out.println("It's Enabled");
             Assert.assertTrue(true);
