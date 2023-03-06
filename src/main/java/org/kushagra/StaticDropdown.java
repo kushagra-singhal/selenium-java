@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class staticDropdown {
+public class StaticDropdown {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/home/kushas/Documents/drivers/chromedriver_linux64/chromedriver");
         WebDriver driver = new ChromeDriver();

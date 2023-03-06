@@ -3,7 +3,7 @@ package org.kushagra;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class seleniumIntroduction {
+public class Seleniumintroduction {
     public static void main(String[] args) {
         //Invoking Browser
         // chrome - chromeDriver --> methods

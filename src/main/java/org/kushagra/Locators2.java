@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class locators2 {
+public class Locators2 {
     public static void main(String[] args) throws InterruptedException {
         String name = "kushagra";
         System.setProperty("webdriver.chrome.driver", "/home/kushas/Documents/drivers/chromedriver_linux64/chromedriver");
