@@ -1,5 +1,6 @@
 package org.kushagra;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +9,8 @@ import java.time.Duration;
 
 public class Locators {
     public static void main(String[] args) throws InterruptedException {
-       System.setProperty("webdriver.chrome.driver", "/home/kushas/Documents/drivers/chromedriver_linux64/chromedriver");
+        WebDriverManager.chromedriver().setup();
+//       System.setProperty("webdriver.chrome.driver", "/home/kushas/Documents/drivers/chromedriver_linux64/chromedriver");
         WebDriver driver = new ChromeDriver();
         //use implicit wait - 5 seconds time out
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // globally applicable adding timeout so that tests won't fail
