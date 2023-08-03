@@ -2,16 +2,19 @@ package org.kushagra;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
 public class Locators {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
+       ChromeOptions ops = new ChromeOptions();
+       ops.addArguments("--remote-allow-origins=*");
+       ChromeDriver driver = new ChromeDriver(ops);
 //       System.setProperty("webdriver.chrome.driver", "/home/kushas/Documents/drivers/chromedriver_linux64/chromedriver");
-        WebDriver driver = new ChromeDriver();
+//        WebDriver driver = new ChromeDriver();
         //use implicit wait - 5 seconds time out
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // globally applicable adding timeout so that tests won't fail
 

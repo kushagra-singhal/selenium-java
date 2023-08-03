@@ -9,7 +9,7 @@ public class BrowserActivities {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();      // to run test in maximize
         driver.get("https://google.com");
-        driver.navigate().to("https://rahulshettyacademy.com");  // use to intenally navigate when running tests
+        driver.navigate().to("https://rahulshettyacademy.com");  // use to internally navigate when running tests
             driver.navigate().back();
         driver.navigate().forward();
     }
